@@ -17,17 +17,25 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+      <profile default="false" name="Annotation profile for algorithm" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="algorithm" />
+      </profile>
+      <profile default="false" name="Annotation profile for tk" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="tk" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="java-treasure" target="1.5" />
-      <module name="tk" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="algorithm" target="1.8" />
+      <module name="java-treasure" target="1.8" />
+      <module name="tk" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
